@@ -35,7 +35,15 @@ TODO: This
 
 ## Your challenges, should you choose to accept them!
 
-Using this knowledge of BrainFuck and Interpreters and in a language of your choice, write a BrainFuck Interpreter that can process this example ..
+ * Using this knowledge of BrainFuck and Interpreters and in a language of your choice, write a BrainFuck Interpreter that can process any BrainFuck code you choose to throw at it!
+
+ I personally suggest working on each of the instructions in pairs, `<>`, `+-`, `.,` and `[]` respectively as this will greatly decrease the complexity of the task.
+
+ * For a secondary challenge try and get your interpreter under a Kilobyte in size
+
+ An easy trick here is to use single character variable and method names.. this is cheating!
+
+ * And if you're feeling a particular kind of crazy .. make it "tweet-able", 140 characters is hard [but possible](http://www.danielvik.com/2016/02/tweetable-brainfuck-interpreter-in-c.html), thankfully Twitter made it 280 characters last year so this is much easier now!
 
 ```
 TODO: Also This
