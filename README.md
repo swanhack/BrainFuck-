@@ -21,11 +21,39 @@ Instructions inside square brackets will only be processed if the current value 
 
 Because of this seemingly limited instruction set and the due to the fact BrainFuck programs don't give any indication of their state they can look a little .. random.
 
-```Brainfuck
+```BrainFuck
 ++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>++.>+.+++++++..+++.<<++.>+++++++++++++++.>.+++.------.--------.<<+.<.
 ```
 
 Before moving on feel free to gain an understanding of BrainFuck, [this](https://copy.sh/brainfuck/) is an online interpreter with some examples you can play with.
+
+# BrainFuck example
+
+This code will take a number from one cell and add it to the cell next to it.
+
+```BrainFuck
+[->+<]
+```
+
+The basis of this code is of course the square brackets, which form a loop, put simply it subtracts one from the left number and adds one to the right number until the left is equal to zero at which point the loop is skipped.
+
+Imagine if you will the left hand number is a 3 and the right hand number is a 5:
+
+Initial state: 3 - 5
+
+The first time the loop is reached the pointer will not be looking at a zero so it will enter the loop.  From here it will subtract one from the left hand side leaving 2 - 5, move right and add one to the right hand side leaving 2 - 6.  It will then reach once again go back to the left side and because the number here is not a zero, it's a 2, the loop will return to the start.
+
+New state: 2 - 6
+
+From here the loop will run again:
+
+New state: 1 - 7
+
+Finally the loop will begin by looking at a 1, which it will then subtract one from leaving zero, and add one to the right hand side, leaving 8 and once again travel back to the left hand side.  As the pointer is now looking at a zero the loop will not restart.
+
+Final state: 0 - 8
+
+Last time I checked 3 + 5 was 8 so I declare this loop a success!
 
 ## Interpreters 101
 
@@ -38,6 +66,14 @@ The most simple way to accomplish this task is to read in the code and execute i
 A slightly more advanced way to carry out this process is to parse, tokenise and then execute the tokens, which are usually just simplified instructions, this is how both [Python](http://www.bash.org/?400459) and [Ruby](https://en.wikipedia.org/wiki/Ruby_(programming_language)) work.
 
 Finally the strangest way to interpret would be to use a runtime compiler and then execute this code?  Strange right.. I'm pretty sure this is how [Pascal](https://en.wikipedia.org/wiki/Pascal_(programming_language)) works but I need a Pascal expert to confirm this for me.
+
+# Interpreters vs Compilers
+
+Interpreter | Compiler
+------------|---------
+Translates a program one line at a time, usually | Translates the entire program in one chunk into machine code, usually
+Takes less time to analyse a program but execution can be slow | Takes more time to analyse a program but execution is considerably faster
+Only crashes when an error is found, if this code is never run a bug may never be found  | Will throw an error message when an error is found even if the code is never run
 
 ## Writing your own interpreter
 
