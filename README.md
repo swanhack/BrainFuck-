@@ -27,7 +27,7 @@ Because of this seemingly limited instruction set and the due to the fact BrainF
 
 Before moving on feel free to gain an understanding of BrainFuck, [this](https://copy.sh/brainfuck/) is an online interpreter with some examples you can play with.
 
-# BrainFuck example
+## BrainFuck example
 
 This code will take a number from one cell and add it to the cell next to it.
 
@@ -39,19 +39,27 @@ The basis of this code is of course the square brackets, which form a loop, put 
 
 Imagine if you will the left hand number is a 3 and the right hand number is a 5:
 
+```
 Initial state: 3 - 5
+```
 
 The first time the loop is reached the pointer will not be looking at a zero so it will enter the loop.  From here it will subtract one from the left hand side leaving 2 - 5, move right and add one to the right hand side leaving 2 - 6.  It will then reach once again go back to the left side and because the number here is not a zero, it's a 2, the loop will return to the start.
 
+```
 New state: 2 - 6
+```
 
 From here the loop will run again:
 
+```
 New state: 1 - 7
+```
 
 Finally the loop will begin by looking at a 1, which it will then subtract one from leaving zero, and add one to the right hand side, leaving 8 and once again travel back to the left hand side.  As the pointer is now looking at a zero the loop will not restart.
 
+```
 Final state: 0 - 8
+```
 
 Last time I checked 3 + 5 was 8 so I declare this loop a success!
 
@@ -73,19 +81,23 @@ Interpreter | Compiler
 ------------|---------
 Translates a program one line at a time, usually | Translates the entire program in one chunk into machine code, usually
 Takes less time to analyse a program but execution can be slow | Takes more time to analyse a program but execution is considerably faster
-Only crashes when an error is found, if this code is never run a bug may never be found  | Will throw an error message when an error is found even if the code is never run
+Only crashes when an error is found, if this code is never executed a bug may never be found  | Will throw an error message when an error is found even if the code is never executed
 
 ## Writing your own interpreter
 
 Writing a simple interpreter is much like writing a file reader and a string parser, it doesn't need to be any more difficult.
 
-NEEDS MORE
+```python
+#TODO: This
+```
 
 #### But why would I want to write my own interpreter?
 
 Because why not?
 
-ALSO NEEDS MORE  
+```python
+#TODO: Also This
+```
 
 ## Your challenges, should you choose to accept them!
 
@@ -99,6 +111,6 @@ ALSO NEEDS MORE
 
  * And if you're feeling a particular kind of crazy .. make it "tweet-able", 140 characters is hard [but possible](http://www.danielvik.com/2016/02/tweetable-brainfuck-interpreter-in-c.html), thankfully Twitter made it 280 characters last year so this is much easier now!
 
-```
-TODO: Also This
+```python
+#TODO: Also This .. maybe .. if you want to add more
 ```
