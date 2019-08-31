@@ -75,14 +75,6 @@ A slightly more advanced way to carry out this process is to parse, tokenise and
 
 Finally the strangest way to interpret would be to use a runtime compiler and then execute this code?  Strange right.. I'm pretty sure this is how [Pascal](https://en.wikipedia.org/wiki/Pascal_(programming_language)) works but I need a Pascal expert to confirm this for me.
 
-## Interpreters vs Compilers
-
-Interpreter | Compiler
-------------|---------
-Translates a program one line at a time, usually | Translates the entire program in one chunk into machine code, usually
-Takes less time to analyse a program but execution can be slow | Takes more time to analyse a program but execution is considerably faster
-Only crashes when an error is found, if this code is never executed a bug may never be found  | Will throw an error message when an error is found even if the code is never executed
-
 ## Writing your own interpreter
 
 Writing a simple interpreter is much like writing a file reader and a string parser, it doesn't need to be any more difficult.
@@ -94,6 +86,8 @@ Writing a simple interpreter is much like writing a file reader and a string par
 #### But why would I want to write my own interpreter?
 
 Because why not?
+
+Writing an interpreter can teach you a lot about how a language processes instructions.. better yet writing your own programming language is extremely fun and you'll need one!
 
 ```python
 #TODO: Also This
