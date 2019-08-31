@@ -67,7 +67,7 @@ A slightly more advanced way to carry out this process is to parse, tokenise and
 
 Finally the strangest way to interpret would be to use a runtime compiler and then execute this code?  Strange right.. I'm pretty sure this is how [Pascal](https://en.wikipedia.org/wiki/Pascal_(programming_language)) works but I need a Pascal expert to confirm this for me.
 
-# Interpreters vs Compilers
+## Interpreters vs Compilers
 
 Interpreter | Compiler
 ------------|---------
