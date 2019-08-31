@@ -17,7 +17,7 @@ Instruction | Meaning
 `[` | Start While()
 `]` | End While()
 
-Instructions inside square brackets will only be processed if when the initial square bracket is reached the current value in the array is zero, otherwise the program will jump to the closing square bracket.  Equally if the second square bracket is reached when the current value is not zero it will jump back to the initial square bracket.
+Instructions inside square brackets will only be processed if the current value in the array is zero when the initial square bracket is reached, otherwise the program will jump to the closing square bracket.  Equally if the second square bracket is reached when the current value is not zero it will jump back to the initial square bracket.
 
 Because of this seemingly limited instruction set and the due to the fact BrainFuck programs don't give any indication of their state they can look a little .. random.
 
@@ -29,9 +29,27 @@ Before moving on feel free to gain an understanding of BrainFuck, [this](https:/
 
 ## Interpreters 101
 
-```
-TODO: This
-```
+Generally speaking an Interpreter.. Interprets stuff.. no kidding :D
+
+They can do this task in one of a few ways:
+
+The most simple way to accomplish this task is to read in the code and execute it immediately, if you were around in the 80's or are lucky enough to have a computer from this era this is how [BASIC](https://en.wikipedia.org/wiki/BASIC) works.
+
+A slightly more advanced way to carry out this process is to parse, tokenise and then execute the tokens, which are usually just simplified instructions, this is how both [P]ython](https://en.wikipedia.org/wiki/Python_(programming_language)) and [Ruby](https://en.wikipedia.org/wiki/Ruby_(programming_language)) work.
+
+Finally the strangest way to interpret would be to use a runtime compiler and then execute this code?  Strange right.. I'm pretty sure this is how [Pascal](https://en.wikipedia.org/wiki/Pascal_(programming_language)) works but I need a Pascal expert to confirm this for me.
+
+## Writing your own interpreter
+
+Writing a simple interpreter is much like writing a file reader and a string parser, it doesn't need to be any more difficult.
+
+NEEDS MORE
+
+#### But why would I want to write my own interpreter?
+
+Because why not?
+
+ALSO NEEDS MORE  
 
 ## Your challenges, should you choose to accept them!
 
