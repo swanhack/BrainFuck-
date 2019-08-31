@@ -35,7 +35,7 @@ They can do this task in one of a few ways:
 
 The most simple way to accomplish this task is to read in the code and execute it immediately, if you were around in the 80's or are lucky enough to have a computer from this era this is how [BASIC](https://en.wikipedia.org/wiki/BASIC) works.
 
-A slightly more advanced way to carry out this process is to parse, tokenise and then execute the tokens, which are usually just simplified instructions, this is how both [P]ython](https://en.wikipedia.org/wiki/Python_(programming_language)) and [Ruby](https://en.wikipedia.org/wiki/Ruby_(programming_language)) work.
+A slightly more advanced way to carry out this process is to parse, tokenise and then execute the tokens, which are usually just simplified instructions, this is how both [Python](http://www.bash.org/?400459) and [Ruby](https://en.wikipedia.org/wiki/Ruby_(programming_language)) work.
 
 Finally the strangest way to interpret would be to use a runtime compiler and then execute this code?  Strange right.. I'm pretty sure this is how [Pascal](https://en.wikipedia.org/wiki/Pascal_(programming_language)) works but I need a Pascal expert to confirm this for me.
 
