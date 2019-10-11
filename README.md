@@ -25,9 +25,9 @@ Because of this seemingly limited instruction set and the due to the fact BrainF
 ++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>++.>+.+++++++..+++.<<++.>+++++++++++++++.>.+++.------.--------.<<+.<.
 ```
 
-Before moving on feel free to gain an understanding of BrainFuck, [this](https://copy.sh/brainfuck/) is an online interpreter with some examples you can play with.
+Before moving on; feel free to gain an understanding of BrainFuck, [this](https://copy.sh/brainfuck/) is an online interpreter with some examples you can play with.
 
-## BrainFuck example
+## Bad explaining 102
 
 This code will take a number from one cell and add it to the cell next to it.
 
@@ -63,7 +63,7 @@ Final state: 0 - 8
 
 Last time I checked 3 + 5 was 8 so I declare this loop a success!
 
-## Interpreters 101
+## Interpreters 103
 
 Generally speaking an Interpreter.. Interprets stuff.. no kidding :D
 
@@ -77,21 +77,34 @@ Finally the strangest way to interpret would be to use a runtime compiler and th
 
 ## Writing your own interpreter
 
-Writing a simple interpreter is much like writing a file reader and a string parser, it doesn't need to be any more difficult.
+Writing a simple interpreter is much like writing a file reader and a string or character parser, it doesn't need to be any more difficult.
 
 ```python
-#TODO: This
+import sys
+
+file = open(sys.argv[1], "r").read()
+
+while char in range(0, len(file)):
+
+# Magical stuff!
+```
+
+For BrainFuck, and these sessions, the entire interpreter need consist of no more than a cascading `if` statement however other languages will require more complex control flow.
+
+```python
+    if file[char] is '+':
+        memory[pointer] += 1
+    elif file[char] is '-':
+        memory[pointer] -= 1
+# Other magical stuff!
 ```
 
 #### But why would I want to write my own interpreter?
 
 Because why not?
 
-Writing an interpreter can teach you a lot about how a language processes instructions.. better yet writing your own programming language is extremely fun and you'll need one!
-
-```python
-#TODO: Also This
-```
+Writing an interpreter can teach you a lot about how a language processes instructions..
+They can be extremely fun to build and if you plan on writing your own programming language one day you'll probably need one!
 
 ## Your challenges, should you choose to accept them!
 
@@ -104,7 +117,3 @@ Writing an interpreter can teach you a lot about how a language processes instru
  An easy trick here is to use single character variable and method names.. this is cheating!
 
  * And if you're feeling a particular kind of crazy .. make it "tweet-able", 140 characters is hard [but possible](http://www.danielvik.com/2016/02/tweetable-brainfuck-interpreter-in-c.html), thankfully Twitter made it 280 characters last year so this is much easier now!
-
-```python
-#TODO: Also This .. maybe .. if you want to add more
-```
