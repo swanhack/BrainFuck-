@@ -22,7 +22,26 @@ Instructions inside square brackets will only be processed if the current value 
 Because of this seemingly limited instruction set and the due to the fact BrainFuck programs don't give any indication of their state they can look a little .. random.
 
 ```BrainFuck
-++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>++.>+.+++++++..+++.<<++.>+++++++++++++++.>.+++.------.--------.<<+.<.
+++++++++++              # Set cell 0 to 10
+[                       # This loop will run 10 times
+    >+                  # Set cell 1 to 1
+    >+++                # Set cell 2 to 3
+    >+++++++            # Set cell 3 to 7
+    >++++++++++         # Set cell 4 to 10
+    <<<<-               # Move to cell 0, reduce by 1
+]
+>>>++.                  # Move to cell 3, add 2, print
+>+.                     # Move to cell 4, add 1, print
++++++++..               # Add 7, print, print
++++.                    # Add 3, print
+<<++.                   # Move to cell 2, add 2, print
+>+++++++++++++++.       # Move to cell 3, add 15, print
+>.                      # Move to cell 4, print
++++.                    # Add 3, print
+------.                 # Reduce by 6, print
+--------.               # Reduce by 8, print
+<<+.                    # Move to cell 2, add 1, print
+<.                      # Move to cell 1, print
 ```
 
 Before moving on; feel free to gain an understanding of BrainFuck, [this](https://copy.sh/brainfuck/) is an online interpreter with some examples you can play with.
