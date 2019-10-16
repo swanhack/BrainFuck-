@@ -19,6 +19,8 @@ Instruction | Meaning
 
 Instructions inside square brackets will only be processed if the current value in the array is zero when the initial square bracket is reached, otherwise the program will jump to the closing square bracket.  Equally if the second square bracket is reached when the current value is not zero it will jump back to the initial square bracket.
 
+Note: Any character that is not listed above is considered a comment and therefore not interpreted.
+
 Because of this seemingly limited instruction set and the due to the fact BrainFuck programs don't give any indication of their state they can look a little .. random.
 
 ```BrainFuck
@@ -51,7 +53,9 @@ Before moving on; feel free to gain an understanding of BrainFuck, [this](https:
 This code will take a number from one cell and add it to the cell next to it.
 
 ```BrainFuck
-[->+<]
+[
+    ->+<
+]
 ```
 
 The basis of this code is of course the square brackets, which form a loop, put simply it subtracts one from the left number and adds one to the right number until the left is equal to zero at which point the loop is skipped.
@@ -96,27 +100,25 @@ Finally the strangest way to interpret would be to use a runtime compiler and th
 
 ## Writing your own interpreter
 
-Writing a simple interpreter is much like writing a file reader and a string or character parser, it doesn't need to be any more difficult.
+Writing a simple BF interpreter is much like writing a file reader and a string or character parser, it doesn't need to be any more difficult.
 
-```python
-import sys
+```
+# open file and read contents
 
-file = open(sys.argv[1], "r").read()
-
-while char in range(0, len(file)):
-
-# Magical stuff!
+for char in file
+    # Do stuff
 ```
 
-For BrainFuck, and these sessions, the entire interpreter need consist of no more than a cascading `if` statement however other languages will require more complex control flow.
+For BrainFuck, and this session, the entire interpreter need consist of no more than a cascading `if` block, other languages however may require more complex control flow.
 
-```python
-    if file[char] is '+':
-        memory[pointer] += 1
-    elif file[char] is '-':
-        memory[pointer] -= 1
-# Other magical stuff!
 ```
+if char +
+    pointer + 1
+else if char -
+    pointer - 1
+```
+
+These examples are intentionally ambiguous, feel free to use whatever language you choose.
 
 #### But why would I want to write my own interpreter?
 
@@ -127,12 +129,12 @@ They can be extremely fun to build and if you plan on writing your own programmi
 
 ## Your challenges, should you choose to accept them!
 
- * Using this knowledge of BrainFuck and Interpreters and in a language of your choice, write a BrainFuck Interpreter that can process any BrainFuck code you choose to throw at it!
+ * Using this knowledge of BrainFuck and in a language of your choice, write a BrainFuck Interpreter that can process any BrainFuck code you choose to throw at it!
 
  I personally suggest working on each of the instructions in pairs, `<>`, `+-`, `.,` and `[]` respectively as this will greatly decrease the complexity of the task.
 
  * For a secondary challenge try and get your interpreter under a Kilobyte in size
 
- An easy trick here is to use single character variable and method names.. this is cheating!
+ An easy trick here is to use single character variable and method names.. this is cheating so please don't do this!
 
  * And if you're feeling a particular kind of crazy .. make it "tweet-able", 140 characters is hard [but possible](http://www.danielvik.com/2016/02/tweetable-brainfuck-interpreter-in-c.html), thankfully Twitter made it 280 characters last year so this is much easier now!
