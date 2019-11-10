@@ -17,7 +17,7 @@ Instruction | Meaning
 `[` | Start While()
 `]` | End While()
 
-Usually BrainFuck is read character by charactor but square brackets can change this behaviour; if when an opening bracket is found the value the pointer is currently looking at is not zero then it will imediately skip commands until it finds the closing bracket of that block.  Similar behavior is true of closing brackets, if the value currently being pointed at is not a zero then it will jump backwards to the opening bracket.  Additionally when any character that is not listed above is encountered it is considered a comment and not interpreted.
+Usually BrainFuck is read character by charactor but square brackets can change this behaviour; if when an opening bracket is found the value the pointer is currently looking at is zero then it will imediately skip commands until it finds the closing bracket of that block.  Similar behavior is true of closing brackets, if the value currently being pointed at is not a zero then it will jump backwards to the opening bracket.  Additionally when any character that is not listed above is encountered it is considered a comment and not interpreted.
 
 Because BrainFuck has no standard concept of variables or methods it uses a fairly rudimentary array of memory cells, each of which can hold a single unsigned 8 bit integer.
 
